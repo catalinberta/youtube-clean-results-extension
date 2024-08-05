@@ -1,0 +1,23 @@
+{
+	"manifest_version": 3,
+	"short_name": "youtube-clean-results-plugin",
+	"name": "Youtube Clean Results Plugin",
+	"version": "1.0.0",
+	"permissions": ["scripting", "storage"],
+	"host_permissions": ["*://*.youtube.com/*"],
+	"action": {
+		"default_popup": "index.html",
+		"default_icon": {
+			"512": "icon-512.png"
+		}
+	},
+	"icons": {
+		"512": "icon-512.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*.youtube.com/*"],
+			"js": ["script.js"]
+		}
+	]
+}
