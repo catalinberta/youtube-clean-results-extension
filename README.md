@@ -10,7 +10,7 @@ You can find it in the [extensions store](https://chromewebstore.google.com/deta
 
 ### Running locally
 
--   Create build by running `npm run build`t
+-   Create build by running `npm run build`
 
 -   In your Chromium browser (Chrome, Brave etc.), go to Manage Extensions and enable "Developer Mode"
 
