@@ -1,5 +1,4 @@
 function runCleanUp() {
-	console.log('Running cleanup by default');
 	chrome.storage.local.get(
 		['enableShorts', 'enableRelated'],
 		function (value) {
@@ -9,7 +8,6 @@ function runCleanUp() {
 	);
 }
 function disableShorts() {
-	console.log('Running disableShorts()');
 	const prevStyleEl = document.getElementById(
 		'youtubeCleanResults_disableShorts',
 	);
@@ -24,7 +22,6 @@ function disableShorts() {
 	document.head.appendChild(styleEl);
 }
 function enableShorts() {
-	console.log('Running enableShorts()');
 	const styleEl = document.getElementById(
 		'youtubeCleanResults_disableShorts',
 	);
@@ -33,7 +30,6 @@ function enableShorts() {
 	}
 }
 function disableRelated() {
-	console.log('Running disableRelated()');
 	const prevStyleEl = document.getElementById(
 		'youtubeCleanResults_disableRelated',
 	);
@@ -48,7 +44,6 @@ function disableRelated() {
 	document.head.appendChild(styleEl);
 }
 function enableRelated() {
-	console.log('Running enableRelated()');
 	const styleEl = document.getElementById(
 		'youtubeCleanResults_disableRelated',
 	);
@@ -60,11 +55,9 @@ function enableRelated() {
 if (document.readyState === 'loading') {
 	document.addEventListener('DOMContentLoaded', runCleanUp);
 } else {
-	console.log(1);
 	runCleanUp();
 }
 chrome.runtime.onMessage.addListener(function (message) {
-	console.log('Got message', message);
 	if (message === 'enableShorts') {
 		enableShorts();
 	}
