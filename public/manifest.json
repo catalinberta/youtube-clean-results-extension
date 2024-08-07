@@ -1,8 +1,8 @@
 {
 	"manifest_version": 3,
 	"short_name": "youtube-clean-results-plugin",
-	"name": "Youtube Clean Results Plugin",
-	"version": "1.0.0",
+	"name": "YouTube Clean Results",
+	"version": "1.0.2",
 	"permissions": ["storage"],
 	"host_permissions": ["*://*.youtube.com/*"],
 	"action": {
